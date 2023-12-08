@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/img_1"
+    tools:context=".AnalysisActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carbon Footprint Calculator"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/darkgreen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/borderd"
+        />
+
+    <!-- Electric -->
+    <TextView
+        android:id="@+id/textelectricity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Electricity:"
+        android:textSize="24sp"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="19dp" />
+
+    <EditText
+        android:id="@+id/editTextelec"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/textelectricity"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="15dp"
+        android:inputType="numberDecimal"
+        android:hint="0"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/kWh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kWh at a factor of"
+        android:textSize="20sp"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@id/editTextelec"
+        android:layout_marginTop="27dp" />
+
+    <EditText
+        android:id="@+id/editTextelec2"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/editTextelec"
+        android:layout_marginTop="15dp"
+        android:inputType="numberDecimal"
+        android:hint="0.3779"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:layout_marginStart="173dp" />
+
+    <TextView
+        android:id="@+id/kWh2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kgCO2e/kWh"
+        android:textSize="20sp"
+        android:layout_below="@id/kWh"
+        android:layout_toEndOf="@id/editTextelec2"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="15dp"/>
+
+    <!-- Natural gas -->
+    <TextView
+        android:id="@+id/textnaturalgas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Natural gas:"
+        android:textSize="24sp"
+        android:layout_below="@id/textelectricity"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="19dp" />
+
+    <EditText
+        android:id="@+id/editTextnatural"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/textnaturalgas"
+        android:layout_below="@id/editTextelec2"
+        android:layout_marginTop="15dp"
+        android:inputType="numberDecimal"
+        android:hint="0"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:layout_marginStart="8dp" />
+
+    <Spinner
+        android:id="@+id/spinnernatur"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/editTextnatural"
+        android:layout_below="@id/kWh2"
+        android:layout_marginTop="27dp"
+        android:inputType="numberDecimal"
+        android:hint="0"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- Heating oil -->
+    <TextView
+        android:id="@+id/textheatingoil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heating oil:"
+        android:textSize="24sp"
+        android:layout_below="@id/textnaturalgas"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="19dp" />
+
+    <EditText
+        android:id="@+id/editTextheating"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/textheatingoil"
+        android:layout_below="@id/editTextnatural"
+        android:layout_marginTop="15dp"
+        android:inputType="numberDecimal"
+        android:hint="0"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:layout_marginStart="15dp" />
+
+    <Spinner
+        android:id="@+id/spinnerheating"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/editTextheating"
+        android:layout_below="@id/spinnernatur"
+        android:layout_marginTop="15dp"
+        android:inputType="numberDecimal"
+        android:hint="0"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- Coal -->
+    <TextView
+        android:id="@+id/textcoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coal:"
+        android:textSize="24sp"
+        android:layout_below="@id/textheatingoil"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="19dp" />
+
+    <EditText
+        android:id="@+id/editTextcoal"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/textcoal"
+        android:layout_below="@id/editTextheating"
+        android:layout_marginTop="15dp"
+        android:inputType="numberDecimal"
+        android:hint="0"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:layout_marginStart="82dp" />
+
+    <Spinner
+        android:id="@+id/spinnercoal"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/editTextcoal"
+        android:layout_below="@id/spinnerheating"
+        android:layout_marginTop="15dp"
+        android:inputType="numberDecimal"
+        android:hint="0"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- LPG -->
+    <TextView
+        android:id="@+id/textlpg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LPG:"
+        android:textSize="24sp"
+        android:layout_below="@id/textcoal"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="19dp" />
+
+    <EditText
+        android:id="@+id/editTextlpg"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/textlpg"
+        android:layout_below="@id/editTextcoal"
+        android:layout_marginTop="15dp"
+        android:inputType="numberDecimal"
+        android:hint="0"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:layout_marginStart="84dp" />
+
+    <Spinner
+        android:id="@+id/spinnerlpg"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/editTextlpg"
+        android:layout_below="@id/spinnercoal"
+        android:layout_marginTop="15dp"
+        android:inputType="numberDecimal"
+        android:hint="0"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- Propane -->
+    <TextView
+        android:id="@+id/textpropane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Propane:"
+        android:textSize="24sp"
+        android:layout_below="@id/textlpg"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="19dp" />
+
+    <EditText
+        android:id="@+id/editTextpro"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/textpropane"
+        android:layout_below="@id/editTextlpg"
+        android:layout_marginTop="15dp"
+        android:inputType="numberDecimal"
+        android:hint="0"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:layout_marginStart="41dp" />
+
+    <Spinner
+        android:id="@+id/spinnerpro"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/editTextpro"
+        android:layout_below="@id/spinnerlpg"
+        android:layout_marginTop="15dp"
+        android:inputType="numberDecimal"
+        android:hint="0"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- Wood -->
+    <TextView
+        android:id="@+id/textwood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wood:"
+        android:textSize="24sp"
+        android:layout_below="@id/textpropane"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="19dp" />
+
+    <EditText
+        android:id="@+id/editTextwood"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/textwood"
+        android:layout_below="@id/editTextpro"
+        android:layout_marginTop="15dp"
+        android:inputType="numberDecimal"
+        android:hint="0"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:layout_marginStart="67dp" />
+
+    <Spinner
+        android:id="@+id/spinnerwood"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_toEndOf="@id/editTextwood"
+        android:layout_below="@id/spinnerpro"
+        android:layout_marginTop="15dp"
+        android:inputType="numberDecimal"
+        android:hint="0"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:layout_marginStart="8dp" />
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextwood"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#009688"
+        android:text="Calculate" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_4"
+        android:layout_below="@id/buttonCalculate"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>

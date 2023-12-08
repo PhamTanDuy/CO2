@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/img_1"
+    tools:context=".ReportActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/darkgreen"
+        android:text="Carbon Footprint Calculator"
+        android:textSize="26sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold"
+        android:background="@drawable/borderd"/>
+
+    <TextView
+        android:id="@+id/deviceelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTitle"
+        android:text="Electricity:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/darkgreen"
+        android:layout_marginBottom="6dp"/>
+
+    <TextView
+        android:id="@+id/deviceelec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@id/deviceelect"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/natur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/deviceelect"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="6dp"
+        android:text="Natural gas:"
+        android:textColor="@color/darkgreen"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/natura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@id/natur"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/heating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heating oil:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/darkgreen"
+        android:layout_below="@id/natur"
+        android:layout_marginBottom="6dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/heatingo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@id/heating"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/coa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coal:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/darkgreen"
+        android:layout_below="@id/heating"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"/>
+
+    <TextView
+        android:id="@+id/coal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@id/coa"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/lp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LPG:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/darkgreen"
+        android:layout_below="@id/coa"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"/>
+
+    <TextView
+        android:id="@+id/lpg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@id/lp"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/propa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Propane:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/darkgreen"
+        android:layout_below="@id/lp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"/>
+
+    <TextView
+        android:id="@+id/propane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@id/propa"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/wood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wood:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/darkgreen"
+        android:layout_below="@id/propa"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"/>
+
+    <TextView
+        android:id="@+id/woo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@id/wood"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/exp"
+        android:layout_width="392dp"
+        android:layout_height="99dp"
+        android:layout_below="@id/wood"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical|start"
+        android:text="Thank you for using this app, we will soon improve and optimize the user experience in the near future."
+        android:textColor="@color/darkgreen"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="375dp"
+        android:layout_height="219dp"
+        android:layout_below="@+id/exp"
+        android:background="@drawable/img_3"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_1"
+    android:padding="10dp"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_horizontal"
+        android:text="Calculator of carbon emissions from electronic devices"
+        android:textColor="@color/darkgreen"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/borderd"/>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="12dp"
+        android:text="Enter your consumption of each type of energy, and press the Calculate button."
+        android:textSize="20sp"
+        android:textColor="@color/darkgreen"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1"
+        android:layout_marginTop="12dp"
+        android:text="Your individual footprint is calculated by dividing the amount of total energy used in the house by the number of people in your household. How many people are in your household?"
+        android:textSize="20sp"
+        android:gravity="center_vertical|start"
+        android:textColor="@color/darkgreen"
+        android:layout_marginStart="10dp"/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/text2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="299dp"
+        android:layout_marginRight="8dp"
+        android:layout_toStartOf="@+id/text2"
+        android:background="@color/white" />
+    <TextView
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/text3"
+        android:layout_below="@+id/spinner"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:text="Note : If you are calculating your full household footprint e.g. for your family, keep this as '1'."
+        android:textColor="@color/darkgreen"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text3"
+        android:layout_marginTop="12dp"
+        android:text="This app was created at the request of the lecturer and the creator is not very good so there are many errors."
+        android:textSize="20sp"
+        android:gravity="center_vertical|start"
+        android:textColor="@color/darkgreen"
+        android:layout_marginStart="10dp"/>
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:layout_below="@id/text4"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#009688"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonCalculate"
+        android:background="@drawable/img_2"
+        android:layout_marginStart="10dp"
+        />
+</RelativeLayout>

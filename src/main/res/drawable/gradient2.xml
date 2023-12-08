@@ -1,0 +1,6 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="@color/teal_700"
+        android:endColor="#C1E1C1"
+        android:angle="270" /> <!-- 270 độ là hướng từ trên xuống -->
+</shape>
